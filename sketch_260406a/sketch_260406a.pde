@@ -14,10 +14,7 @@ color green   = #CAFFBF;
 color blue    = #A0C4FF;
 color purple  = #BDB2FF; 
 
-
-void setup() {
-  size(800, 800);
-}
+color indicatorColor = white;
 
 void setup() {
   size(800, 850);
@@ -45,8 +42,14 @@ void draw() {
   drawButton(30, y+gap*3, s, green);
   drawButton(30, y+gap*4, s, blue);
   drawButton(30, y+gap*5, s, purple);
-  drawButton(30, y+gap*6+10, s, black);
-  drawButton(30, y+gap*7+10, s, white);
+  drawButton(30, y+gap*6+10, s, 0);
+  drawButton(30, y+gap*7+10, s, 225);
+
+ // color  indicator
+  stroke(thistle);
+  strokeWeight(3);
+  fill(indicatorColor);
+  circle(750, 50, 40);
 
   //  canvas
   fill(white);
@@ -55,7 +58,18 @@ void draw() {
 
 // --- BUTTON FUNCTION---
 void drawButton(int x, int y, int size, color c) {
+
+  // tactile hover detection 
+  if (mouseX > x && mouseX < x + size &&
+      mouseY > y && mouseY < y + size) {
+    stroke(white);      // highlight stroke
+    strokeWeight(4);      // thicker on hover
+    indicatorColor = c;
+  } else {
+    stroke(black);  // default stroke
+    strokeWeight(2);
+  }
+
   fill(c);
   rect(x, y, size, size);
-
- }
+}
