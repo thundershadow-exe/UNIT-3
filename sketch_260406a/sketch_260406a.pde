@@ -26,13 +26,15 @@ int sliderW = 400;
 
 void setup() {
   size(800, 850);
+  background(white);
 }
 
 void draw() {
-  background(white);
+  
 
   // --- TOP---
-  fill(black);
+strokeWeight(1);
+ fill(black);
   rect(0, 0, 800, 100);
 
   // --- SLIDER BAR ---
@@ -70,10 +72,6 @@ void draw() {
   strokeWeight(3);
   fill(indicatorColor);
   circle(750, 50, brushSize * 2);   // <-- indicator scales with brush size
-
-  //  canvas
-  fill(white);
-  rect(90, 100, width - 90, height - 150);
 
   // --- DRAWING ---
   if (mousePressed &&
