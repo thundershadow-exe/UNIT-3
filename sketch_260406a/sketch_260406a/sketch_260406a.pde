@@ -1,3 +1,6 @@
+// --- STAMP IMAGES ---
+PImage nerdy, yipee;
+
 // --- UI COLORS --- 
 color thistle = #CBC0D3;
 color white   = #F7F7FF;
