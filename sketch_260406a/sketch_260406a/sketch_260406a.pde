@@ -30,6 +30,8 @@ int sliderW = 400;
 void setup() {
   size(800, 850);
   background(white);
+  nerdy = loadImage("nerdy stamp.png");
+  yipee = loadImage("yipee stamp.png");
 }
 
 void draw() {
@@ -130,6 +132,15 @@ void mouseReleased() {
   // WHITE
   if (mouseX > 30 && mouseX < 30+s && mouseY > y+gap*7+10 && mouseY < y+gap*7+10+s) indicatorColor = white;
 }
+
+// stamp buttons
+circleButton(white, 45, y + gap*8 + 40, 40);   // nerdy stamp button
+circleButton(white, 45, y + gap*9 + 40, 40);   // yipee stamp button
+
+// draw stamp previews inside the buttons
+imageMode(CENTER);
+image(nerdy, 45, y + gap*8 + 40, 30, 30);
+image(yipee, 45, y + gap*9 + 40, 30, 30);
 
 
 // ------------------------------------------------------------
