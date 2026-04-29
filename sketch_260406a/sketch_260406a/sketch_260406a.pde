@@ -143,9 +143,9 @@ image(nerdy, 45, y + gap*8 + 40, 30, 30);
 image(yipee, 45, y + gap*9 + 40, 30, 30);
 
 
-// ------------------------------------------------------------
+
+
 // --- TACTILE BUTTON FUNCTIONS ---
-// ------------------------------------------------------------
 
 void rectButton(color c, float x, float y, float w, float h) {
 
