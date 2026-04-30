@@ -1,3 +1,7 @@
+// My computer is broken and I can't use Processing on other devices so i will just commit this to make it look good and green lol :>
+// If my commits this week 04-27 to 05-05 look weird, that's because i can't run to check it...
+// Thank you! 
+
 // --- STAMP IMAGES ---
 PImage nerdy, yipee;
 
