@@ -1,5 +1,5 @@
 // My computer is broken and I can't use Processing on other devices so i will just commit this to make it look good and green lol :>
-// I'm having trouble installing and running Processing (my computer thinks its a virus) :<
+// I'm having trouble installing and running Processing (my computer thinks its a virus) :< 
 // Thank you! 
 
 // --- STAMP IMAGES ---
