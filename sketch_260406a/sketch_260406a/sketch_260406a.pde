@@ -1,3 +1,5 @@
+// FIRST REAL COMMIT IN LOWKEY FOREVER YAYYYY
+
 // --- STAMP IMAGES ---
 PImage nerdy, yipee;
 
