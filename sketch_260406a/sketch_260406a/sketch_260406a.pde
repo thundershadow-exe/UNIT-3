@@ -1,3 +1,4 @@
+// I fixed the slider from yesterday. Don't have much time to do more work.
 // --- STAMP IMAGES ---
 PImage nerdy, yipee;
 
