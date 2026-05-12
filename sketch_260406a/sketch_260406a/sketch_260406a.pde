@@ -1,5 +1,3 @@
-// FIRST REAL COMMIT IN LOWKEY FOREVER YAYYYY
-
 // --- STAMP IMAGES ---
 PImage nerdy, yipee;
 
@@ -130,6 +128,14 @@ circleButton(225, 45, stampY2, 40);
 imageMode(CENTER);
 image(nerdy, 45, stampY1, 30, 30);
 image(yipee, 45, stampY2, 30, 30);
+}
+
+void mousePressed() {
+  float knobX = sliderX + map(brushSize, 1, 40, 0, sliderW);
+  if (dist(mouseX, mouseY, knobX, sliderY) < 20) {
+    draggingSlider = true;
+    return;
+  }
 }
 
 void mouseReleased() {
