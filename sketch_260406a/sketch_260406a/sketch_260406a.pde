@@ -1,4 +1,3 @@
-// I fixed the slider from yesterday. Don't have much time to do more work.
 // --- STAMP IMAGES ---
 PImage nerdy, yipee;
 
@@ -72,6 +71,18 @@ void draw() {
   rectButton(purple, 30, y+gap*5, s, s);
   rectButton(black,  30, y+gap*6, s, s);
   rectButton(white,  30, y+gap*7, s, s);
+  // --- TOP-LEFT BUTTONS ---
+rectButton(white, 20, 35, 60, 30);   // NEW
+rectButton(white, 100, 35, 60, 30);  // SAVE
+rectButton(white, 180, 35, 60, 30);  // LOAD
+
+fill(black);
+textAlign(CENTER, CENTER);
+textSize(14);
+
+text("NEW", 20 + 30, 35 + 15);
+text("SAVE", 100 + 30, 35 + 15);
+text("LOAD", 180 + 30, 35 + 15);
 
   // color indicator
   stroke(thistle);
@@ -102,7 +113,6 @@ if (stampOn) {
   }
 
   // --- STAMP BUTTONS ---
-// --- STAMP BUTTONS ---
 float stampY1 = y + gap*8 + 25;
 float stampY2 = y + gap*9 + 40;
 
@@ -211,7 +221,50 @@ if (dist(mouseX, mouseY, 45, stampY2) < 20) {
   currentStamp = yipee;
 }
 
+// --- NEW BUTTON PROCESS ---
+if (mouseX > 20 && mouseX < 80 &&
+    mouseY > 35 && mouseY < 65){
+  noStroke();
+  fill(white);
+  rect(90, 100, width - 90, height - 150);
+    }
+
+// --- SAVE BUTTON PROCES---
+if (mouseX > 100 && mouseX < 160 &&
+    mouseY > 35 && mouseY < 65) {
+  selectOutput("Choose a name for your image file:", "saveImage");
+    }
+ // ---LOAD BUTTON PROCESS ---
+if (mouseX > 180 && mouseX < 240 &&
+    mouseY > 35 && mouseY < 65) {
+
+  selectInput("Pick an image to load:", "openImage");
 }
+
+}
+
+  
+  void saveImage(File f) {
+ 
+  if (f != null) {
+    // capture  drawing area
+    PImage canvas = get(90, 100, width - 90, height - 150);
+    canvas.save(f.getAbsolutePath());
+  }
+  }
+  
+  void openImage(File f) {
+  if (f != null) {
+    // load the chosen image
+    PImage pic = loadImage(f.getAbsolutePath());
+
+    // draw it inside the drawing area
+    if (pic != null) {
+      image(pic, 90, 100, width - 90, height - 150);
+    }
+  }
+}
+
 
 // --- TACTILE BUTTON FUNCTIONS ---
 
