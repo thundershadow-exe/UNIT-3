@@ -1,3 +1,4 @@
+// didn't have time to work today. tomorrow is 7 minutes away so i'll wait till then :>
 // --- STAMP IMAGES ---
 PImage nerdy, yipee;
 
